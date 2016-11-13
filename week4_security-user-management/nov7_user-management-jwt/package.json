@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "DEBUG=myapp.* nodemon server.js",
-    "test": "MONGODB_URI=mongodb://localhost/pirates-test mocha",
-    "test:watch": "MONGODB_URI=mongodb://localhost/pirates-test nodemon --exec mocha"
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:e2e": "MONGODB_URI=mongodb://localhost/pirates-test mocha ./test/e2e",
+    "test:unit": "mocha ./test/unit",
+    "test:unit:watch": "mocha -w ./test/unit",
+    "test:e2e:watch": "nodemon --exec 'npm run test:e2e'"
   },
   "author": "Marty Nelson <marty@martypdx.com>",
   "license": "ISC",
