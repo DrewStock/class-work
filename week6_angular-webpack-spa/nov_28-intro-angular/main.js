@@ -1,8 +1,7 @@
 
 var app = angular.module('myApp', []);
 
-// app.directive('ngClick')
-
+week6_angular-webpack-spa/nov_28-intro-angular/main.js
 let init = 10;
 app.controller('counterCtrl', function($scope) {
     $scope.count = init++;
