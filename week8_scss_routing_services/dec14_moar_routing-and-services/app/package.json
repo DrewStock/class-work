@@ -8,7 +8,7 @@
     "pretest": "npm run lint",
     "test": "karma start --single-run",
     "test:watch": "karma start",
-    "start": "webpack-dev-server --inline",
+    "start": "webpack-dev-server --inline --port 8000",
     "build": "webpack"
   },
   "author": "Marty Nelson <marty@martypdx.com>",
